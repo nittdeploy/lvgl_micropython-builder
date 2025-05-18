@@ -1,0 +1,12 @@
+diff -Naur lvgl_micropython/lib/lv_conf.h lvgl_micropython-edited/lib/lv_conf.h
+--- lvgl_micropython/lib/lv_conf.h	2025-04-21 00:26:00.385102310 +0200
++++ lvgl_micropython-edited/lib/lv_conf.h	2025-04-21 00:34:44.523957098 +0200
+@@ -498,7 +498,7 @@
+ #define LV_FONT_MONTSERRAT_14 1
+ #define LV_FONT_MONTSERRAT_16 1
+ #define LV_FONT_MONTSERRAT_18 0
+-#define LV_FONT_MONTSERRAT_20 0
++#define LV_FONT_MONTSERRAT_20 1
+ #define LV_FONT_MONTSERRAT_22 0
+ #define LV_FONT_MONTSERRAT_24 0
+ #define LV_FONT_MONTSERRAT_26 0

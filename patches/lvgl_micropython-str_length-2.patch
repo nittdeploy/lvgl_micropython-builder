@@ -1,0 +1,51 @@
+diff -Naur lvgl_micropython-original/lib/micropython/py/emitinlinextensa.c lvgl_micropython/lib/micropython/py/emitinlinextensa.c
+--- lvgl_micropython-original/lib/micropython/py/emitinlinextensa.c	2025-05-14 08:40:26.490921101 +0200
++++ lvgl_micropython/lib/micropython/py/emitinlinextensa.c	2025-05-14 18:06:53.148556563 +0200
+@@ -116,7 +116,7 @@
+ }
+ 
+ typedef struct _reg_name_t { byte reg;
+-                             byte name[3];
++                             byte name[4];
+ } reg_name_t;
+ static const reg_name_t reg_name_table[] = {
+     {0, "a0\0"},
+diff -Naur lvgl_micropython-original/lib/micropython/py/emitinlinethumb.c lvgl_micropython/lib/micropython/py/emitinlinethumb.c
+--- lvgl_micropython-original/lib/micropython/py/emitinlinethumb.c	2025-05-14 08:24:54.692814452 +0200
++++ lvgl_micropython/lib/micropython/py/emitinlinethumb.c	2025-05-14 08:35:59.361432291 +0200
+@@ -147,7 +147,7 @@
+ }
+ 
+ typedef struct _reg_name_t { byte reg;
+-                             byte name[3];
++                             byte name[4];
+ } reg_name_t;
+ static const reg_name_t reg_name_table[] = {
+     {0, "r0\0"},
+@@ -365,7 +365,7 @@
+ }
+ 
+ typedef struct _cc_name_t { byte cc;
+-                            byte name[2];
++                            byte name[3];
+ } cc_name_t;
+ static const cc_name_t cc_name_table[] = {
+     { ASM_THUMB_CC_EQ, "eq" },
+@@ -385,7 +385,7 @@
+ };
+ 
+ typedef struct _format_4_op_t { byte op;
+-                                char name[3];
++                                char name[4];
+ } format_4_op_t;
+ #define X(x) (((x) >> 4) & 0xff) // only need 1 byte to distinguish these ops
+ static const format_4_op_t format_4_op_table[] = {
+@@ -425,7 +425,7 @@
+ // actual opcodes are: 0xee00 | op.hi_nibble, 0x0a00 | op.lo_nibble
+ typedef struct _format_vfp_op_t {
+     byte op;
+-    char name[3];
++    char name[4];
+ } format_vfp_op_t;
+ static const format_vfp_op_t format_vfp_op_table[] = {
+     { 0x30, "add" },

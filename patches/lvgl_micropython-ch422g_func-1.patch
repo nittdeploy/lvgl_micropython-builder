@@ -1,0 +1,12 @@
+diff -Naur lvgl_micropython/api_drivers/common_api_drivers/io_expander/ch422g.py lvgl_micropython-edited/api_drivers/common_api_drivers/io_expander/ch422g.py
+--- lvgl_micropython/api_drivers/common_api_drivers/io_expander/ch422g.py	2025-04-21 00:26:00.377437345 +0200
++++ lvgl_micropython-edited/api_drivers/common_api_drivers/io_expander/ch422g.py	2025-04-21 00:38:09.993426130 +0200
+@@ -33,7 +33,7 @@
+ 
+     @classmethod
+     def set_device(cls, device):
+-        io_expander_framework.Pin.set_device.__func__(cls, device)
++        io_expander_framework.Pin.set_device(device)
+ 
+         cls._reg_in = i2c.I2C.Device(
+             bus=device._bus,  # NOQA
